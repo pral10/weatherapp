@@ -1,0 +1,32 @@
+/* TopButtons.css */
+
+.fancy-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: Add a bit of box shadow for a subtle depth effect */
+.fancy-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: If you want the buttons to look more like tags */
+.fancy-button {
+  margin: 0 8px;
+}
+
+/* Optional: If you want the buttons to have a border */
+.fancy-button {
+  border: 1px solid #3498db;
+}

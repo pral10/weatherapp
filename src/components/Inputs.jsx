@@ -1,5 +1,8 @@
+// Inputs.jsx
+
 import React, { useState } from "react";
 import { GrLocation, GrSearch } from "react-icons/gr";
+import "./Inputs.css"; // Import your CSS file for styling
 
 const Inputs = ({ setCity, unit, setUnit }) => {
   const [cityInput, setCityInput] = useState("");
@@ -22,31 +25,31 @@ const Inputs = ({ setCity, unit, setUnit }) => {
   };
 
   return (
-    <div className="flex flex-row justify-center my-6">
-      <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
+    <div className="inputs-container">
+      <div className="search-bar">
         <input
           type="text"
-          placeholder="search for city..."
-          className="text-xl text-gray-500 rounded-md font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
+          placeholder="Search for a city..."
+          className="search-input"
           value={cityInput}
           onChange={(e) => setCityInput(e.target.value)}
         />
         <GrSearch
           onClick={handleCitySearch}
           size={25}
-          className="cursor-pointer transition ease-out hover:scale-125"
+          className="search-icon"
         />
         <GrLocation
           onClick={handleLocationClick}
           size={25}
-          className="cursor-pointer transition ease-out hover:scale-125"
+          className="location-icon"
         />
       </div>
 
-      <div className="flex flex-row w-1/4 items-center justify-center">
+      <div className="unit-toggle">
         <button
           onClick={() => setUnit(unit === "c" ? "f" : "c")}
-          className="text-xl font-light border rounded-md px-5 py-1 transition hover:scale-105"
+          className="unit-button"
         >
           {`°${unit === "c" ? "F" : "C"}`}
         </button>

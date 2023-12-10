@@ -3,7 +3,7 @@ import { BsThermometerHalf, BsCloudSun } from "react-icons/bs";
 import { MdOutlineWaterDrop } from "react-icons/md";
 import { FiWind } from "react-icons/fi";
 import { WiSunrise, WiSunset, WiMoonrise, WiMoonset } from "react-icons/wi";
-
+import "./TemperatureAndDetails.css";
 function RenderDetail(props) {
   const Icon = props.icon;
   return (

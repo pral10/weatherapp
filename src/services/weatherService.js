@@ -13,7 +13,7 @@ const fetchData = (apiMethod, searchParams) => {
 export const getFormattedWeatherData = async (city) => {
   const formattedWeather = await fetchData("forecast", {
     q: city,
-    days: 3,
+    days: 5,
   }).then(formatForecastWeather);
 
   return formattedWeather;
@@ -74,7 +74,7 @@ const formatHourlyForecast = (forecast, loc_epoch, timezone) => {
     (forecast) => forecast.time_epoch > loc_epoch
   );
   hourlyForecast = hourlyForecast
-    .slice(1, 6)
+    .slice(1, 8)
     .map(({ temp_c, temp_f, time_epoch, condition: { icon } }) => {
       return {
         temp_c,

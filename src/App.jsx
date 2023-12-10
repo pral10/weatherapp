@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TopButtons from "./components/topButtons";
+import TopButtons from "./components/TopButtons";
 import Inputs from "./components/Inputs";
 import TimeAndLocation from "./components/TimeAndLocation";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
@@ -10,7 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  const [city, setCity] = useState("Mumbai");
+  const [city, setCity] = useState("Boston");
   const [unit, setUnit] = useState("c");
   const [weather, setWeather] = useState(null);
 

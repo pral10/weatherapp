@@ -1,14 +1,15 @@
 import React from "react";
+import "./TopButtons.css"; 
 
 const TopButtons = ({ setCity }) => {
   const cities = [
     {
       id: 1,
-      title: "London",
+      title: "Boston",
     },
     {
       id: 2,
-      title: "Sydney",
+      title: "London",
     },
     {
       id: 3,
@@ -16,7 +17,7 @@ const TopButtons = ({ setCity }) => {
     },
     {
       id: 4,
-      title: "Toronto",
+      title: "Kathmandu",
     },
     {
       id: 5,
@@ -30,7 +31,7 @@ const TopButtons = ({ setCity }) => {
         <button
           onClick={() => setCity(city.title)}
           key={city.id}
-          className="  text-lg font-medium"
+          className="fancy-button"
         >
           {city.title}
         </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./TimeAndLocation.css";
 
 const TimeAndLocation = ({
   weather: { locDateTime, loc_name, loc_country },
