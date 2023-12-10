@@ -1,10 +1,10 @@
 import { DateTime } from "luxon";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const BASE_URL = "http://api.weatherapi.com/v1";
+const BASE_URL = "https://api.weatherapi.com/v1"; // Updated to use HTTPS
 
 const fetchData = (apiMethod, searchParams) => {
-  const url = new URL(BASE_URL + "/" + apiMethod + ".json");
+  const url = new URL(`${BASE_URL}/${apiMethod}.json`);
   url.search = new URLSearchParams({ key: API_KEY, ...searchParams });
 
   return fetch(url).then((res) => res.json());
